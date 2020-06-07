@@ -46,35 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Only called when either availability or info
 function fullcalendar_init() {
-	// Add necessary scripts
-			/*var script_tag = document.createElement('script');
-		script_tag.setAttribute("type","text/javascript");
-		script_tag.setAttribute("src","https://kit.fontawesome.com/543a1e5fb2.js");
-		(document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);*/
-	
-	/*var scripts  = ["https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/core/main.min.js","https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/daygrid/main.min.js","https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/list/main.min.js","https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/google-calendar/main.min.js",
-	"https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/core/locales/nl.js"];
-	
-	for(var i = 0; i <= scripts.length-1; i++){
-		var script_tag = document.createElement('script');
-		script_tag.setAttribute("type","text/javascript");
-		script_tag.setAttribute("src",scripts[i]);
-script_tag.async = false; 
-		(document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
-	}
-	
-	// Add necessary styles
-	var styles = ["https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/core/main.min.css","https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/daygrid/main.min.css","https://cdn.jsdelivr.net/gh/PaulHermens/fahrmannhaus/fullcalendar-4.1.0/packages/list/main.min.css"]
-	
-	for(var i = 0; i <= styles.length-1; i++){
-		var link_tag = document.createElement('link');
-		link_tag.setAttribute("rel","stylesheet");
-		link_tag.setAttribute("href",styles[i]);
-link_tag.async = false; 
-		(document.getElementsByTagName("head")[0] || document.documentElement).appendChild(link_tag);
-	}
-	*/
-
 	var googlecalapi = 'AIzaSyDK4W4kNWfk2QUTu4izsTaDlH4GYZ-OMy8';
 	
 	var availabilityID = 'jk5c8vi00vfhshlodq67ca7qq8@group.calendar.google.com';
@@ -83,32 +54,30 @@ link_tag.async = false;
 	
 	
 	calendarjson = {
-		defaultView: 'dayGridMonth'
+		headerToolbar: { start: 'prev,next today', center: 'title', end: 'dayGridMonth,listYear' }, // buttons for switching between views
+		
 		plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'dayGridMonth,listYear'
-		},
+		initialView: 'dayGridMonth',
+
 		locale: 'nl',
 		displayEventTime: false, // don't show the time column in list view
 		googleCalendarApiKey: googlecalapi,
 		height: "auto"
 	};
 	
-		   if($(window).width() < 1100){
-				  calendarjson.defaultView = 'listYear';
-				  calendarjson.header = {
+	if($(window).width() < 1100){
+		calendarjson.initialView = 'listYear';
+		calendarjson.headerToolbar = {
 			left: '',
 			center: 'title',
 			right: 'dayGridMonth,listYear'
 		}
-					calendarjson.footer =  {
+		calendarjson.footerToolbar =  {
 			left: '',
 			center: 'prev,next,today',
 			right: ','
 		}
-		   }
+	}
 	
 	
 	if(pageAvailability) {	
