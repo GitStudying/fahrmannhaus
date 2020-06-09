@@ -83,7 +83,7 @@ link_tag.async = false;
 	
 	
 	calendarjson = {
-		defaultView: 'dayGridMonth'
+		defaultView: 'dayGridMonth',
 		plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
 		header: {
 			left: 'prev,next today',
