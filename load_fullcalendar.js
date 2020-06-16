@@ -1,3 +1,30 @@
+// Handle unnecessary banners
+var noheader = true;
+var page = "";
+var pageAvailability = false;
+var pageInfo = false;
+var pageHome = true;
+
+if(window.location.href.indexOf("vakantiewoning") > -1)
+	noheader= true;
+else if(window.location.href.indexOf("tarieven") > -1) 
+{
+	noheader= true;
+	pageAvailability = true;
+}
+else if(window.location.href.indexOf("info") > -1) 
+{
+	noheader= true;
+	pageInfo = true;
+}
+else if(window.location.href.indexOf("contact") > -1) 
+	noheader= false;
+else if(window.location.href.indexOf("recensies") > -1) 
+	noheader= false;
+else if(window.location.href.indexOf("huurder") > -1) 
+	noheader= false;
+
+
 var calendar;
 var calendarEl;
 var calendarjson;
