@@ -127,7 +127,7 @@ link_tag.async = false;
 	document.getElementById('fullcalendar-editor').style.display = "none";
 	
 	// Render previously initiated calendars
-	calendar.render();
+	//calendar.render();
 }
 
 function render() {
