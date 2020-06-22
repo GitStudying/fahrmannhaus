@@ -124,11 +124,7 @@ link_tag.async = false;
 	// Create calendar itself
 	calendar = new FullCalendar.Calendar(calendarEl, calendarjson);
 	
-	document.getElementById('fullcalendar-editor').style.display = "none";
-	
 	// Render previously initiated calendars
-	calendar.render();
-	
 	render(calendar);
 }
 
@@ -138,7 +134,7 @@ function render(calendar) {
 	// Render previously initiated calendars
 	calendar.render();
 
-	if (calendar == null) {
+	if ($('#availability-ediger').children().length == 0) {
 		setTimeout(function() { wait() }, 500);
 	} else {
 		//
