@@ -30,15 +30,6 @@ var calendarEl;
 var calendarjson;
 
 document.addEventListener('DOMContentLoaded', function() {
-	$(".banner").parent().slideUp('slow');
-	/*if(noheader)
-	{
-		$(".banner").parent().slideUp('slow');
-	} else {
-		$(".banner").parent().fadeIn('slow');
-	}*/
-	
-
 	if(!(pageAvailability || pageInfo))
 		return;
 	fullcalendar_init();
@@ -133,7 +124,6 @@ function render() {
 	
 	// Render previously initiated calendars
 	calendar.render();
-	console.log('tried')
 
 	if ($('#availability-ediger').children().length == 0) {
 		console.log('retrying fullcalendar')
