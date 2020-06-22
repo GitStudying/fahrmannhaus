@@ -128,7 +128,7 @@ link_tag.async = false;
 	render(calendar);
 }
 
-function render(calendar) {
+function render() {
 	document.getElementById('fullcalendar-editor').style.display = "none";
 	
 	// Render previously initiated calendars
@@ -136,8 +136,9 @@ function render(calendar) {
 	console.log('tried')
 
 	if ($('#availability-ediger').children().length == 0) {
-		setTimeout(function() { render() }, 500);
+		console.log('retrying fullcalendar')
+		setTimeout(render(), 500);
 	} else {
-		//
+		console.log('fullcalendar rendered')
 	}
 }
