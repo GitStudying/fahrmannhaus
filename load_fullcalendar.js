@@ -127,17 +127,14 @@ link_tag.async = false;
 	document.getElementById('fullcalendar-editor').style.display = "none";
 	
 	// Render previously initiated calendars
-	//calendar.render();
+	calendar.render(calendar);
 }
 
-function render() {
-	// Create calendar itself
-	calendar = new FullCalendar.Calendar(calendarEl, calendarjson);
-	
+function render(calendar) {
 	document.getElementById('fullcalendar-editor').style.display = "none";
 	
 	// Render previously initiated calendars
-	calendar.render();
+	calendar.render(calendar);
 
 	if (calendar == null) {
 		setTimeout(function() { wait() }, 500);
