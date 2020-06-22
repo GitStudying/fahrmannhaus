@@ -133,9 +133,10 @@ function render(calendar) {
 	
 	// Render previously initiated calendars
 	calendar.render();
+	console.log('tried')
 
 	if ($('#availability-ediger').children().length == 0) {
-		setTimeout(function() { wait() }, 500);
+		setTimeout(function() { render() }, 500);
 	} else {
 		//
 	}
