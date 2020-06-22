@@ -128,13 +128,15 @@ link_tag.async = false;
 	
 	// Render previously initiated calendars
 	calendar.render();
+	
+	render(calendar);
 }
 
 function render(calendar) {
 	document.getElementById('fullcalendar-editor').style.display = "none";
 	
 	// Render previously initiated calendars
-	calendar.render(calendar);
+	calendar.render();
 
 	if (calendar == null) {
 		setTimeout(function() { wait() }, 500);
