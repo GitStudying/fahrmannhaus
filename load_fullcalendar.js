@@ -125,7 +125,7 @@ link_tag.async = false;
 	calendar = new FullCalendar.Calendar(calendarEl, calendarjson);
 	
 	// Render previously initiated calendars
-	render(calendar);
+	render();
 }
 
 function render() {
