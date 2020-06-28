@@ -5,7 +5,9 @@ var pageAvailability = false;
 var pageInfo = false;
 var pageHome = true;
 
-if(window.location.href.indexOf("vakantiewoning") > -1)
+if(window.location.href.indexOf("editor") > -1)
+	page="editor";
+else if(window.location.href.indexOf("vakantiewoning") > -1)
 	noheader= true;
 else if(window.location.href.indexOf("tarieven") > -1) 
 {
@@ -30,9 +32,8 @@ var calendarEl;
 var calendarjson;
 
 document.addEventListener('DOMContentLoaded', function() {
-	if(!(pageAvailability || pageInfo))
-		return;
-	fullcalendar_init();
+	if(pageAvailability || pageInfo || page == "editor")
+		fullcalendar_init();
 });
 
 // Only called when either availability or info
@@ -87,7 +88,7 @@ link_tag.async = false;
 		height: "auto"
 	};
 	
-		   if($(window).width() < 1100){
+		   if(window.innerWidth < 1100){
 				  calendarjson.defaultView = 'listYear';
 				  calendarjson.header = {
 			left: '',
@@ -127,7 +128,7 @@ function render() {
 
 	if ($('#availability-ediger').children().length == 0) {
 		console.log('retrying fullcalendar')
-		setTimeout(render(), 500);
+		// setTimeout(render(), 500);
 	} else {
 		console.log('fullcalendar rendered')
 	}
