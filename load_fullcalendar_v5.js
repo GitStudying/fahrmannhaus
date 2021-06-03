@@ -99,7 +99,7 @@ link_tag.async = false;
 					calendarjson.footerToolbar =  {
 			left: '',
 			center: 'prev,next,today',
-			right: ','
+			right: ''
 		}
 		   }
 	
