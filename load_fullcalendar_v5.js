@@ -77,8 +77,8 @@ link_tag.async = false;
 	
 	
 	calendarjson = {
-		defaultView: 'dayGridMonth',
-		header: {
+		initialView : 'dayGridMonth',
+		headerToolbar: {
 			left: 'prev,next today',
 			center: 'title',
 			right: 'dayGridMonth,listYear'
@@ -90,13 +90,13 @@ link_tag.async = false;
 	};
 	
 		   if(window.innerWidth < 1100){
-				  calendarjson.defaultView = 'listYear';
-				  calendarjson.header = {
+				  calendarjson.initialView = 'listYear';
+				  calendarjson.headerToolbar = {
 			left: '',
 			center: 'title',
 			right: 'dayGridMonth,listYear'
 		}
-					calendarjson.footer =  {
+					calendarjson.footerToolbar =  {
 			left: '',
 			center: 'prev,next,today',
 			right: ','
