@@ -32,8 +32,10 @@ var calendarEl;
 var calendarjson;
 
 document.addEventListener('DOMContentLoaded', function() {
-	if(pageAvailability || pageInfo || page == "editor")
+	if(pageAvailability || pageInfo)
 		fullcalendar_init();
+	else if(page == "editor")
+		document.getElementById('fullcalendar-editor').innerHTML = "Je bent in de editor, ga naar de site om de kalender te zien" ;
 });
 
 // Only called when either availability or info
