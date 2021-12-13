@@ -50,7 +50,7 @@ function fullcalendar_init() {
 	calendarjson = {
 		initialView : 'dayGridMonth',
 		headerToolbar: {
-			start: 'prev,next today',
+			left: 'today prev,next',
 			center: 'title',
 			end: 'dayGridMonth,listYear'
 		},
@@ -63,13 +63,13 @@ function fullcalendar_init() {
 	if(window.innerWidth < 1100){
 		calendarjson.initialView = 'listYear';
 		calendarjson.headerToolbar = {
-			start: '',
+			left: '',
 			center: 'title',
 			end: 'dayGridMonth,listYear'
 		}
 		calendarjson.footerToolbar =  {
-			start: '',
-			center: 'prev,next,today',
+			left: '',
+			center: 'today prev,next',
 			end: ''
 		}
 	}
