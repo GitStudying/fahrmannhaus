@@ -52,7 +52,7 @@ function fullcalendar_init() {
 		headerToolbar: {
 			left: 'today prev,next',
 			center: 'title',
-			end: 'dayGridMonth,listYear'
+			right: 'dayGridMonth,listYear'
 		},
 		locale: 'nl',
 		displayEventTime: false, // don't show the time column in list view
@@ -65,12 +65,12 @@ function fullcalendar_init() {
 		calendarjson.headerToolbar = {
 			left: '',
 			center: 'title',
-			end: 'dayGridMonth,listYear'
+			right: 'dayGridMonth,listYear'
 		}
 		calendarjson.footerToolbar =  {
 			left: '',
 			center: 'today prev,next',
-			end: ''
+			right: ''
 		}
 	}
 	
