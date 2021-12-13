@@ -50,9 +50,9 @@ function fullcalendar_init() {
 	calendarjson = {
 		initialView : 'dayGridMonth',
 		headerToolbar: {
-			left: 'prev,next today',
+			start: 'prev,next today',
 			center: 'title',
-			right: 'dayGridMonth,listYear'
+			end: 'dayGridMonth,listYear'
 		},
 		locale: 'nl',
 		displayEventTime: false, // don't show the time column in list view
@@ -63,14 +63,14 @@ function fullcalendar_init() {
 	if(window.innerWidth < 1100){
 		calendarjson.initialView = 'listYear';
 		calendarjson.headerToolbar = {
-			left: '',
+			start: '',
 			center: 'title',
-			right: 'dayGridMonth,listYear'
+			end: 'dayGridMonth,listYear'
 		}
 		calendarjson.footerToolbar =  {
-			left: '',
+			start: '',
 			center: 'prev,next,today',
-			right: ''
+			end: ''
 		}
 	}
 	
