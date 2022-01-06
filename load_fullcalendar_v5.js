@@ -1,8 +1,8 @@
 // Load requirements:
-<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel='stylesheet' />
-<script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@5.10.1/main.global.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+//<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel='stylesheet' />
+//<script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+//<script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@5.10.1/main.global.min.js"></script>
+//<script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
 
 
 // Handle unnecessary banners
