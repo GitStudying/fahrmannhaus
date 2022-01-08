@@ -104,7 +104,7 @@ function render() {
 	// Render previously initiated calendars
 	calendar.render();
 
-	if ($('#availability-ediger').children().length == 0) {
+	if (document.getElementById('availability-ediger').childNodes.length == 0) {
 		console.log('retrying fullcalendar')
 		// setTimeout(render(), 500);
 	} else {
