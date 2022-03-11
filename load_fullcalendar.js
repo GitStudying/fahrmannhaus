@@ -16,12 +16,12 @@ if(window.location.href.indexOf("editor") > -1)
 	page="editor";
 else if(window.location.href.indexOf("vakantiewoning") > -1)
 	noheader= true;
-else if(window.location.href.indexOf("tarieven") > -1 || window.location.href.indexOf("regio") > -1) 
+else if(window.location.href.indexOf("tarieven") > -1) 
 {
 	noheader= true;
 	pageAvailability = true;
 }
-else if(window.location.href.indexOf("info") > -1) 
+else if(window.location.href.indexOf("info") > -1 || window.location.href.indexOf("regio") > -1) 
 {
 	noheader= true;
 	pageInfo = true;
