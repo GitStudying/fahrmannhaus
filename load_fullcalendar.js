@@ -16,7 +16,7 @@ if(window.location.href.indexOf("editor") > -1)
 	page="editor";
 else if(window.location.href.indexOf("vakantiewoning") > -1)
 	noheader= true;
-else if(window.location.href.indexOf("tarieven") > -1) 
+else if(window.location.href.indexOf("tarieven") > -1 || window.location.href.indexOf("regio") > -1) 
 {
 	noheader= true;
 	pageAvailability = true;
@@ -41,8 +41,6 @@ var calendarjson;
 document.addEventListener('DOMContentLoaded', function() {
 	if(pageAvailability || pageInfo)
 		fullcalendar_init();
-	else if(page == "editor")
-		document.getElementById('fullcalendar-editor').innerHTML = "Je bent in de editor, ga naar de site om de kalender te zien" ;
 });
 
 // Only called when either availability or info
@@ -51,8 +49,6 @@ function fullcalendar_init() {
 	
 	var availabilityID = 'jk5c8vi00vfhshlodq67ca7qq8@group.calendar.google.com';
 	var infoID = 'set2o5diubn1vg8l0d0lngvrk4@group.calendar.google.com';
-	
-	
 	
 	calendarjson = {
 		initialView : 'dayGridMonth',
@@ -67,6 +63,7 @@ function fullcalendar_init() {
 		height: "auto"
 	};
 	
+	// Give mobile a different layout
 	if(window.innerWidth < 1100){
 		calendarjson.initialView = 'listYear';
 		calendarjson.headerToolbar = {
