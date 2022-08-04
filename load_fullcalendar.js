@@ -51,8 +51,10 @@ function fullcalendar_init() {
 	var infoID = 'set2o5diubn1vg8l0d0lngvrk4@group.calendar.google.com';
 	
 	calendarjson = {
-		eventAfterAllRender: function(allLoaded){
-			if(allLoaded){
+		loading: function(loading){
+			if(loading){
+				console.log("loading");
+			} else {
 				console.log("everything loaded using load_fullcalendar")
 				buttonclickhandler();
 				hideinfo();
