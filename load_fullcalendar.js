@@ -60,6 +60,11 @@ function fullcalendar_init() {
 				hideinfo();
 			}
 		},
+		eventClick: function (event) {
+			// Prevent redirect to Google Calendar
+			event.jsEvent.cancelBubble = true;
+			event.jsEvent.preventDefault();
+		},
 		initialView : 'dayGridMonth',
 		headerToolbar: {
 			left: 'today prev,next',
