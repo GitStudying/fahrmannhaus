@@ -16,7 +16,7 @@ if(window.location.href.indexOf("editor") > -1)
 	page="editor";
 else if(window.location.href.indexOf("vakantiewoning") > -1)
 	noheader= true;
-else if(window.location.href.indexOf("tarieven") > -1) 
+else if(window.location.href.indexOf("algemeen") > -1) 
 {
 	noheader= true;
 	pageAvailability = true;
